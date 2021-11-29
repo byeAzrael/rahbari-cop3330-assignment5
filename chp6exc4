@@ -1,0 +1,54 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 5 Solution
+ *  Copyright 2021 Ryan Rahbari
+ */
+#include <iostream>
+#include <vector>
+using namespace std;
+class Value_name {
+    public:
+    string name;
+    double score;
+};
+bool compareNames(vector<Value_name> &valueNameList, string name);
+void printValueNameList(vector<Value_name> &valueNameList);
+int main(){
+    string name;
+    double score;
+    vector<Value_name> valueNameList;
+    Value_name obj;
+    while(true){
+   cout<< "Enter Name/Score (Enter Blank 0 to quit):";
+   cin>>name>>score;
+   if (compareNames(valueNameList, name) == true) {
+   cout<<"Name currently in system." << endl;
+   }else{
+   if(name=="Blank"&&score==0){
+   printValueNameList(valueNameList); 
+   break;
+   }else{
+obj.name=name;
+obj.score=score;
+valueNameList.push_back(obj);
+   }
+  }   
+  }
+return 0;
+}
+bool compareNames(vector<Value_name> &valueNameList, string name){
+    for(int i=0;i<valueNameList.size();i++){
+    if(name == valueNameList[i].name){
+     return true;
+     }else{
+     continue;
+     }
+    }
+return false;
+}
+
+void printValueNameList(vector<Value_name> &valueNameList) {
+    
+    for (int i = 0; i < valueNameList.size(); i++) {
+        cout<<valueNameList[i].name<<" "<<valueNameList[i].score<<endl;
+    }
+}

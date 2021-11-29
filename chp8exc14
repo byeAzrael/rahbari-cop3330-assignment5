@@ -1,0 +1,28 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 5 Solution
+ *  Copyright 2021 Ryan Rahbari
+ */
+
+ //It is possible to declare a non-reference function, although it is unable to be modified; this is useful in situations in which when the function is called, it disrupts the argument.
+ 
+#include <iostream>
+#include <cmath>
+using namespace std;
+int sqrt2(const int number);
+int cbrt3(const int number);
+int main() {
+    int number;
+    cout<<"Input integer: ";
+    cin>>number;
+    cout <<number<<" square rooted is " << sqrt(number) << ".\n";
+    cout <<number<<" cube rooted is " << cbrt(number) << ".\n";
+    return 0;
+}
+/*
+int sqrt2(const int number) {
+    return sqrt(number, 2);
+}
+int cbrt3(const int number) {
+    return cbrt(number, 5);
+}
+*/

@@ -1,0 +1,30 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 5 Solution
+ *  Copyright 2021 Ryan Rahbari
+ */
+#include <iostream>
+#include <cmath>
+using namespace std;
+void rootsCalc(double a, double b, double c);
+int main() {
+	double a, b, c;
+	cout << "Enter a, b, and c: ";
+	cin >>a>>b>> c;
+    rootsCalc(a, b, c);
+    return 0;
+}
+void rootsCalc(double a, double b, double c) {
+  double x1, x2, root;
+  root=pow(b,2)-(4*c*a);
+	if(root == 0) {
+  x1 = -b + sqrt(root) / (a*2);
+  cout <<"The actual root = " << x1 << ".";
+	}
+	else if(root>0){
+  x1=(-b-sqrt(root))/(a*2);
+  x2=(-b+sqrt(root))/(a*2); 
+  cout << "The actual roots= "<<x1<<" or "<<x2<<".";
+}
+else
+cout<<"No roots.";
+}

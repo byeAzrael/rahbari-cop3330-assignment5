@@ -1,0 +1,15 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 5 Solution
+ *  Copyright 2021 ryan_rahbari
+ */
+#include <iostream>
+using namespace std;
+bool isEven(int n){return(n%2==0);}
+int main()
+{
+    int n;
+    cout<<"Enter integer value:";
+    cin>>n;
+    isEven(n)?cout<<"Even":cout<<"Odd";
+    return 0;
+}
